@@ -10,8 +10,8 @@ setwd('C://Users//orhol//Desktop//Candace_School//MOOCS//Johns Hopkins Data Scie
 # rawpm25 <- readRDS('summarySCC_PM25.rds')
 
 
-## Create a 
-sumdata <- rowsum(rawpm25$Emissions, rawpm25$year)/100000
+## Create a dataframe summing the emissions by year
+sumdata <- as.data.frame(rowsum(rawpm25$Emissions, rawpm25$year)/100000)
 setnames(sumdata, "TotalEmissions")
 
 png("plo1.png", width = 480, height = 480)
